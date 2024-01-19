@@ -71,6 +71,7 @@ void _addnode(stack_t **hdl, int n);
 void _free_stack(stack_t *head);
 void _addqueue(stack_t **hdl, int n);
 void pint(int *stack, int *stack_size);
+void push(stack_t *stack, int value)
 
 void opcode_nop(stack_t **stack, unsigned int line_number);
 void _push(stack_t **head, unsigned int line_number);
