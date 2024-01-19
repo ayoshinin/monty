@@ -15,47 +15,15 @@
  * if not empty it prints the eror message.
  */
 
-void push(int value);
-void pint(void);
-
-int main(void)
+void pint(int *stack, int *stack_size)
 {
-	push(5); /* Push value onto the stack */
+        int top_value; /* Move variable declaration to the beginning */
 
-	pint(); /* Call the pint opcode */
-
-	return (0);
-}
-
-/**
- * push - Pushes a value onto the stack
- * @value: The value to be pushed onto the stack
- */
-void push(int value)
-{
-	static int SP = -1;
-
-	if (SP < (STACK_SIZE - 1))
-	{
-		fprintf(stderr, "Error: Stack overflow");
-		exit(EXIT_FAILURE);
-	}
-}
-
-/**
- * pint - Prints the top value of the stack
- */
-void pint(void)
-{
-	static int SP = -1;
-
-	if (SP < 0)
-	{
-		fprintf(stderr, "Error: can't pint, stack empty");
-		exit(EXIT_FAILURE);
-	}
-	else
-	{
-		printf("%d\n", stack[SP]);
-	}
+        if (*stack_size == 0)
+        {
+                printf("L<line_number>: can't pint, stack empty\n");
+                exit(EXIT_FAILURE);
+        }
+        top_value = stack[*stack_size - 1]; /* Assign the value */
+        printf("%d\n", top_value); /* Print the value */
 }
