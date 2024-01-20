@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <monty.h>
 #include <stdlib.h>
 
 #define STACK_SIZE 100

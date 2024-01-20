@@ -70,8 +70,8 @@ int _execute(char *cont, stack_t **hdl, unsigned int line_number, FILE *file);
 void _addnode(stack_t **hdl, int n);
 void _free_stack(stack_t *head);
 void _addqueue(stack_t **hdl, int n);
-void pint(int *stack, int *stack_size);
-void push(stack_t *stack, int value)
+void _ pint(int *stack, int *stack_size);
+void _ push(stack_t *stack, int value)
 
 void opcode_nop(stack_t **stack, unsigned int line_number);
 void _push(stack_t **head, unsigned int line_number);
@@ -89,4 +89,5 @@ void _div(stack_t **hdl, unsigned int line_number);
 void _mul(stack_t **hdl, unsigned int line_number);
 void _mod(stack_t **hdl, unsigned int line_number);
 void _stack(stack_t **hdl, unsigned int line_number);
+
 #endif  /*MONTY_HEAD*/
